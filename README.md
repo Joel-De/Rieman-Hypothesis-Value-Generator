@@ -1,7 +1,7 @@
 # Rieman-Hypothesis-Value-Generator
-WARNING: Program creates several threads and WILL lag your computer out if you want to do other things on it while running this, I've designed it so that it stores all the values in a vector before outputing them to help speed things up, so dont input very high values & accuracy levels. OR bypass this feature (should be pretty straight forward) and output to the file each itteration (Will slow you down if you are using an HDD).
+WARNING: Program creates several threads and will pin your CPU at 100% until it solves, I've designed it so that it stores all the values in a vector before outputing them to help speed things up (I could easily make this more effecient to conserve RAM but for the range of values I needed, and most people will need, the program only used ~700 MB of RAM so I didnt bother), so dont input very high values & accuracy levels. OR bypass this feature (should be pretty straight forward) and output to the file each itteration (Will slow you down if you are using an HDD).
 
-Creates a map of the complex values that the Riemann Zeta function outputs for a given complex input in the critical strip
+Creates a map of the complex values that the Riemann Zeta function outputs for a given complex input in the critical strip (complex numbers with real value 0.5 and imaginary part within a range).
 
 All the number are output to a text file, Have fun :)
 
