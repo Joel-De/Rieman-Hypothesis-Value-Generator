@@ -3,7 +3,7 @@ WARNING: Program creates several threads and will pin your CPU at 100% until it 
 
 Creates a map of the complex values that the Riemann Zeta function outputs for a given complex input in the critical strip (complex numbers with real value 0.5 and imaginary part within a range).
 
-All the number are output to a text file, Have fun :)
+All the numbers are output to a text file, Have fun :)
 
 Below is a snipet of what the output looks like, mind you this was taken form a file with over 2 million lines
 ///////////////////////////////////////////////
