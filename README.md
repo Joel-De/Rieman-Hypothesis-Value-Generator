@@ -1,28 +1,14 @@
 # Rieman-Hypothesis-Value-Generator
-WARNING: Program creates several threads and will pin your CPU at 100% until it solves, I've designed it so that it stores all the values in a vector before outputing them to help speed things up (I could easily make this more effecient to conserve RAM but for the range of values I needed, and most people will need, the program only used ~700 MB of RAM so I didnt bother), so dont input very high values & accuracy levels. OR bypass this feature (should be pretty straight forward) and output to the file each itteration (Will slow you down if you are using an HDD).
 
-Creates a map of the complex values that the Riemann Zeta function outputs for a given complex input in the critical strip (complex numbers with real value 0.5 and imaginary part within a range).
+The following is a program that generates values from the Rieman hypothesis, a conjecture that is yet to be solved. This program is not to be viewed as a mathamatical solution as the methods it utilizes are primitive, but as an application of performance implications of multithreading parallel workloads. Currently there are 3 approaches, single threaded, multi-threaded, and GPU acceleration with CUDA. Included is both a directory with visual studio project files, and an independent folder with source code. The number of summations is flexible for the cpu compute functions, but is dependent on your hardware for CUDA, since if the process takes too long a watchdog violation is called and the kernel terminates, this is mostly in part to this implementation not being fully parallel in nature.
 
-All the numbers are output to a text file, Have fun :)
+Creates a map of the complex values that the Riemann Zeta function outputs for a given complex input in the critical strip (complex numbers with real value 0.5 and imaginary part within a range). This information can then be used for further analysis in another framework preventing the need to constantly regenerate the data.
 
-Below is a snipet of what the output looks like, mind you this was taken form a file with over 2 million lines
-///////////////////////////////////////////////
-
-(0.000000,-100.000000)		(-6.801919,-2.577035)
-
-(0.000000,-99.990000)		(-6.873489,-2.311642)
-
-(0.000000,-99.980000)		(-6.933550,-2.043684)
-
-(0.000000,-99.970000)		(-6.981989,-1.773755)
-
-(0.000000,-99.960000)		(-7.018729,-1.502453)
-
-(0.000000,-99.950000)		(-7.043730,-1.230379)
-
-(0.000000,-99.940000)		(-7.056990,-0.958135)
-
-(0.000000,-99.930000)		(-7.058540,-0.686322)
+The output is in CSV file, a sample of this is provided and available for download.
 
 
-///////////////////////////////////////////////
+The code was compiled with nvcc for CUDA 11.3.109 and tested on a GPU (K2200) with compute capability 50
+The CPU used in the CPU tests is a Xeon 1620 v3
+
+The following are the results:
+
