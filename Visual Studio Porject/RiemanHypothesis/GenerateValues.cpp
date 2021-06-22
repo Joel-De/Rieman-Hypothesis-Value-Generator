@@ -36,7 +36,7 @@ int main() {
 	results = GenerateValuesMultiThread(yMin, yMax, step, accuracy, 8);
 	end = clock();
 	time_taken = ((double)end - (double)start) / double(CLOCKS_PER_SEC);
-	std::cout <<"Time Taken for Single MultiThread:\t" +  std::to_string(time_taken) << std::endl;
+	std::cout <<"Time Taken for MultiThread:\t" +  std::to_string(time_taken) << std::endl;
 
 
 	start = clock();
