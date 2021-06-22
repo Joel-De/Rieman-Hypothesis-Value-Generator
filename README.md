@@ -13,6 +13,8 @@ The CPU used in the CPU tests is a Xeon 1620 v3
 The following are the results:
 
 Single Thread: 5:07
+
 Multithread: 0:53
+
 Cuda Acceleration : 0:38
 
